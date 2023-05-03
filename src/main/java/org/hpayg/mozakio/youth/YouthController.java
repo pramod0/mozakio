@@ -1,9 +1,8 @@
-package org.hpayg.mozakio;
+package org.hpayg.mozakio.youth;
 
 import java.rmi.ServerException;
 import java.util.List;
 
-import org.hpayg.mozakio.models.Youth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,11 +42,11 @@ public class YouthController {
     }
     
     @PostMapping("/registerYouth")    
-    public Boolean registerYouth(@RequestBody Youth youth) {
+    public Youth registerYouth(@RequestBody Youth youth) {
     	System.out.println(youth);
     	Youth y =  youthService.setYouth(youth);
-    	if(y == null) return false;
+    	if(y == null) return null;
     	
-    	return true;
+    	return y;
     }
 }

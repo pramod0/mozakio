@@ -1,4 +1,4 @@
-package org.hpayg.mozakio.models;
+package org.hpayg.mozakio.youth;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

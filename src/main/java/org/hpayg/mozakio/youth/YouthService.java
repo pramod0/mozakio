@@ -1,8 +1,7 @@
-package org.hpayg.mozakio;
+package org.hpayg.mozakio.youth;
 
 import java.util.List;
 
-import org.hpayg.mozakio.models.Youth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

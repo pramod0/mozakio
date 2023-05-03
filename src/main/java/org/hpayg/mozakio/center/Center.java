@@ -1,4 +1,4 @@
-package org.hpayg.mozakio.models;
+package org.hpayg.mozakio.center;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 public class Center {
 	@Id
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
-	public String id;
+	public Integer id;
 	public String name;
 	public String location;
 	

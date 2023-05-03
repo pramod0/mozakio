@@ -1,4 +1,4 @@
-package org.hpayg.mozakio.models;
+package org.hpayg.mozakio.weeklyForumEvent;
 
 import java.time.LocalDate;
 
@@ -15,7 +15,7 @@ public class WeeklyForumEvent {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public String id;
 	
-	@Id public String branchId;
+	@Id public String centerId;
 	public LocalDate date;
 	
 }
