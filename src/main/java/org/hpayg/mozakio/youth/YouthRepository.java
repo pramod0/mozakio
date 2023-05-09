@@ -9,8 +9,8 @@ import org.springframework.data.repository.query.Param;
 
 public interface YouthRepository extends JpaRepository<Youth, Integer> {
 	
-	@Query("select a from Youth a where a.userid = :userId")
-    Youth findAllWithFilteredUserId(@Param("userId") Integer userId);
+	@Query("select a from Youth a where a.id = :id")
+    Youth findAllWithFilteredUserId(@Param("id") Integer userId);
 	
 
 }

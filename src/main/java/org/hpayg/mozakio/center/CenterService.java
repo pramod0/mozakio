@@ -19,7 +19,7 @@ public class CenterService {
 		return centerRepo.save(center);
 	}
 
-	public Center getConditionalCenter(Integer id) {
+	public Center getCenterById(Integer id) {
 		return centerRepo.findCenter(id);
 	}
 }

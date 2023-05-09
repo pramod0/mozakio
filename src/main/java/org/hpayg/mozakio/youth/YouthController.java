@@ -35,10 +35,10 @@ public class YouthController {
         return youthService.getConditionalYouth(userId);
     }
     
-    @GetMapping("/youth/{userId}")
+    @GetMapping("/youth/{id}")
     @ResponseBody()
-    public Youth getYouth(@PathVariable("userId") Integer userId){
-        return youthService.getConditionalYouth(userId);
+    public Youth getYouth(@PathVariable("id") Integer id){
+        return youthService.getConditionalYouth(id);
     }
     
     @PostMapping("/registerYouth")    

@@ -26,10 +26,10 @@ public class CenterController {
 	
 	@GetMapping("center/{id}")
 	public Center getCenter(@PathVariable Integer id) {
-		return centerService.getConditionalCenter(id);
+		return centerService.getCenterById(id);
 	}
 	
-	@PostMapping("registerCenter")
+	@PostMapping("createCenter")
 	public Center registerCenter(@RequestBody Center center) {
 		return centerService.setCenter(center);
 	}

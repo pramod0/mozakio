@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 public class Youth {
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
-	public Integer userid;
+	public Integer id;
 	public String rollno;
 	public String team;
 	public String youthFullName;
