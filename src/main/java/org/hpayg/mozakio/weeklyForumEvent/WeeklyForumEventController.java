@@ -7,10 +7,11 @@ import org.hpayg.mozakio.center.CenterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -25,6 +26,7 @@ public class WeeklyForumEventController {
 	CenterService centerService;
 	
 	@GetMapping("allWFEvents")
+	@ResponseBody
 	public List<WeeklyForumEvent> getEvents(){
 		return wfeService.getWFEvents();		
 	}
@@ -34,6 +36,12 @@ public class WeeklyForumEventController {
 		Center center = centerService.getCenterById(centerId);
 	    wfEvent.setCenter(center);
 	    return wfeService.save(wfEvent);
+	}
+	
+	@GetMapping("getWFEventById/{id}")
+	@ResponseBody
+	public WeeklyForumEvent getWFEventById(@PathVariable("id") Integer id) {
+		return wfeService.getWFEventById(id);
 	}
 	
 }

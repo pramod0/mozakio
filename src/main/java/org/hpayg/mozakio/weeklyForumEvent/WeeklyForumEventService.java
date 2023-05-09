@@ -1,6 +1,7 @@
 package org.hpayg.mozakio.weeklyForumEvent;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.hibernate.Hibernate;
 import org.hpayg.mozakio.center.Center;
@@ -34,6 +35,11 @@ public class WeeklyForumEventService {
 
 	public WeeklyForumEvent save(WeeklyForumEvent wfEvent) {
 		return wfeRepo.save(wfEvent);
+	}
+
+	public WeeklyForumEvent getWFEventById(Integer weekly_forum_event_id) {
+		List<Center> allCenters = centerRepository.findAll();
+		return wfeRepo.findById(weekly_forum_event_id).get();
 	}
 
 }
