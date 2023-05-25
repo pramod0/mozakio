@@ -8,14 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @SpringBootApplication
-public class MozakioApplication {
-
-	@RequestMapping("/")
-    @ResponseBody
-    String home() {
-      return "Hello World!";
-    }
-	
+public class MozakioApplication {	
 	public static void main(String[] args) {
 		SpringApplication.run(MozakioApplication.class, args);
 	}

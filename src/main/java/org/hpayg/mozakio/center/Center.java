@@ -20,7 +20,6 @@ public class Center {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	public Integer id;
-	public String name;
 	public String location;
 	
 	public Integer getId() {
@@ -29,12 +28,7 @@ public class Center {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+
 	public String getLocation() {
 		return location;
 	}
@@ -44,7 +38,7 @@ public class Center {
 	
 	@Override
 	public String toString() {
-		return name + " " + location;
+		return location;
 	}
 	
 	
