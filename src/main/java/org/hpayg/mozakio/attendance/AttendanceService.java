@@ -47,6 +47,22 @@ public class AttendanceService {
 		
 		return attendanceRepo.getAttendanceByYouthId(youth_id);
 	}
+
+	public List<Attendance> getAttendanceByWFEId(Integer weekly_forum_event_id) {
+		centerRepository.findAll();
+		wfeRepo.findAll();
+		youthRepository.findAll();
+		WeeklyForumEvent wfe = wfeRepo.getById(weekly_forum_event_id);
+		return attendanceRepo.getAttendanceByWFEId(weekly_forum_event_id);
+	}
+
+	public List<Youth> getYouthByWFEId(Integer weekly_forum_event_id) {
+		centerRepository.findAll();
+		wfeRepo.findAll();
+		youthRepository.findAll();
+		WeeklyForumEvent wfe = wfeRepo.getById(weekly_forum_event_id);
+		return attendanceRepo.getYouthListByEventId(weekly_forum_event_id);
+	}
 	
 	
 }

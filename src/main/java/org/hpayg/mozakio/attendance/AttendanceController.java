@@ -36,10 +36,20 @@ public class AttendanceController {
 		return attendanceService.getAttendances();
 	}
 	
-	@GetMapping("/attendance/{youth_id}")
+	@GetMapping("/attendanceByYouthId/{youth_id}")
 	public List<Attendance> getAttendanceByYouthId(@PathVariable("youth_id") Integer youth_id){
-		return attendanceService.getAttendanceByYouthId(youth_id);
-		
+		return attendanceService.getAttendanceByYouthId(youth_id);		
+	}
+	
+	@GetMapping("/attendanceByEventId/{weekly_forum_event_id}")
+	public List<Attendance> getAttendanceByWeeklyForumEventId(@PathVariable("weekly_forum_event_id") Integer weekly_forum_event_id){
+		return attendanceService.getAttendanceByWFEId(weekly_forum_event_id);		
+	}
+	
+	
+	@GetMapping("/youthByEventId/{weekly_forum_event_id}")
+	public List<Youth> getYouthByWeeklyForumEventId(@PathVariable("weekly_forum_event_id") Integer weekly_forum_event_id){
+		return attendanceService.getYouthByWFEId(weekly_forum_event_id);		
 	}
 	
 	@PostMapping("/markAttendance")
